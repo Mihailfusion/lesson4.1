@@ -28,7 +28,7 @@ function getFriendlyNumbers(start, end) {
 
     
 }
-getFriendlyNumbers(1, 1);
+getFriendlyNumbers(1, 1211);
 // console.log(getDivisorsRange(1, 1211));
 let arr = {
     number: [],
@@ -86,8 +86,8 @@ answer.sort(function (a, b) { return a - b });
 
 
 
-module.exports = {
-    firstName: 'Name',
-    secondName: 'Surname',
-    task: getFriendlyNumbers
-}
+// module.exports = {
+//     firstName: 'Name',
+//     secondName: 'Surname',
+//     task: getFriendlyNumbers
+// }
