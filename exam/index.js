@@ -28,7 +28,7 @@ function getFriendlyNumbers(start, end) {
 
     
 }
-getFriendlyNumbers(1, 1211);
+getFriendlyNumbers(1, 1);
 // console.log(getDivisorsRange(1, 1211));
 let arr = {
     number: [],
