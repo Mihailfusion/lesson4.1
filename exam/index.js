@@ -1,35 +1,17 @@
-// function getFriendlyNumbers(start, end) {
-//     let sumArr = [];
-
-//     for (let i = start; i <= end; i++) {
-//         let sum = 0;
-
-//         for (let j = 0; j <= i; j++) {
-//             if (i % j === 0) sum = j;
-//         }
-
-//         sumArr.push(sum);
-//     }
-
-//     return sumArr;
-   
-// }
-// getFriendlyNumbers(0, 10);
-// console.log(getFriendlyNumbers(0, 10));
-
-
+"use strict";
+let result = [];
 function getFriendlyNumbers(start, end) {
     if (start > end && typeof start === 'string' && typeof end === 'string' && start % 1 == 0 && end % 1 == 0 ) {
-        var temp = start;
+        let temp = start;
         start = end;
         end = temp;
     }
-    result = new Array();
-    var index = 0;
+   
+    let index = 0;
     for (let i = start; i <= end; i++) {
         result.push({
             num: i,
-            divisors: new Array(),
+            divisors: [],
         })
         for (let j = 1; j <= i; j++) {
             if (i % j == 0 && i != j) {
@@ -47,9 +29,9 @@ let arr = {
     sum: [],
 };
 let answer = [];
-for (var d = 0; d < result.length; d++) {
+for (let d = 0; d < result.length; d++) {
     let p = 0;
-    for (var m = 0; m < result[d].divisors.length; m++) {
+    for (let m = 0; m < result[d].divisors.length; m++) {
 
         p += result[d].divisors[m];
     }
