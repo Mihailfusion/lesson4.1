@@ -1,5 +1,9 @@
 "use strict";
 let result = [];
+
+    
+
+
 function getFriendlyNumbers(start, end) {
     if (start > end && typeof start === 'string' && typeof end === 'string' && start % 1 == 0 && end % 1 == 0 ) {
         let temp = start;
@@ -21,6 +25,8 @@ function getFriendlyNumbers(start, end) {
         index++;
     }
     return result;
+
+    
 }
 getFriendlyNumbers(1, 1211);
 // console.log(getDivisorsRange(1, 1211));
@@ -54,6 +60,7 @@ for (let i = 0; i < answer.length;) {
     for (let j = 1 ; j < 3; j++) {
         if (answer[i][0] == answer[i + 1][1]) {
         delete answer[j];
+        // answer.splice(j);
         // console.log('ok');
           
         i++;
@@ -63,9 +70,24 @@ for (let i = 0; i < answer.length;) {
     }
 }
 }
-if (answer.length < 1) {
-    answer.push([])
+// if (answer.length < 1) {
+//     answer.push([])
     
-}
+// }
+answer = answer.filter(function (e) { //Удаляем пустые элементы.
+    return e
+});
 answer.sort(function (a, b) { return a - b });
  console.log(answer);
+
+
+
+
+
+
+
+module.exports = {
+    firstName: 'Name',
+    secondName: 'Surname',
+    task: getFriendlyNumbers
+}
