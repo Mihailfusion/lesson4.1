@@ -6,7 +6,7 @@ let arr = {
 };
 let answer = [];
 function getFriendlyNumbers(start, end) {
-	if (start > end || typeof start === 'string' || typeof end === 'string' && start % 1 == 0 && end % 1 == 0 ) {
+	if (start > end || start < 1 || end < 1 || typeof start === 'string' || typeof end === 'string' && start % 1 == 0 && end % 1 == 0 ){
 		console.log(false);
 			return false;
 	} else {
@@ -54,7 +54,7 @@ function getFriendlyNumbers(start, end) {
 	console.log(answer);
 }
 
-getFriendlyNumbers(1000, 1211);
+getFriendlyNumbers(1, 1211);
 
 
 
